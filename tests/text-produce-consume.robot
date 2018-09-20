@@ -1,5 +1,5 @@
 *** Settings ***
-Library     ../src/robotframework-pykafka.py
+Library     ../robotframework-pykafka/robotframework-pykafka.py
 
 *** Test Cases ***
 Test Producing and Consuming a Message
