@@ -1,0 +1,2 @@
+robotframework == 3.0.4
+pykafka == 2.7.0
