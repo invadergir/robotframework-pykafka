@@ -1,11 +1,9 @@
-from pykafka import Producer,KafkaClient
+import json
+import os
+from pykafka import KafkaClient
 from pykafka.common import OffsetType
 from robot.api import logger
 from robot.api.deco import keyword
-import datetime
-import os
-import uuid
-import json
 
 # Determine the kafka host
 _kafkaHost = ""

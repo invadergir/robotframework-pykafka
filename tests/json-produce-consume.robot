@@ -1,5 +1,5 @@
 *** Settings ***
-Library     ../src/robotframework-pykafka.py
+Library     ../robotframework-pykafka/robotframework-pykafka.py
 Library     JSONLibrary
 
 *** Test Cases ***
