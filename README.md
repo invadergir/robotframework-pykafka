@@ -10,6 +10,12 @@ This library provides some robotframework keywords that make working with Kafka 
 
 Support is guaranteed for Python 2.7.X only at this time.  It has not been tested on anything else.  All dependent libs should work under 3 but we have not tested yet.
 
+### Importing
+
+To import this library use the following command:
+
+ ```Library robotframework_pykafka.robotframework_pykafka```
+ 
 ### Kafka Version Support
 
 Support is guaranteed for 1.0.X only at this time.  It has not been tested on anything else.
