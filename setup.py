@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name='robotframework-pykafka',
-    packages=['robotframework-pykafka'],  # this must be the same as the name above
-    version='0.0.2',
+    name='robotframework_pykafka',
+    packages=['robotframework_pykafka'],  # this must be the same as the name above
+    version='0.0.9',
     install_requires=[
 
     ],
@@ -11,7 +11,7 @@ setup(
     author='Michael Sesterhenn',
     author_email='invadergir@users.noreply.github.com',
     url='https://github.com/invadergir/robotframework-pykafka',
-    download_url='https://github.com/spothero/py-responsys/tarball/0.0.2',
+    download_url='https://github.com/invadergir/robotframework_pykafka/tarball/0.0.2',
     keywords=['robotframework', 'kafka','testing'],
     classifiers=["Programming Language :: Python :: 2.7",
                  "Topic :: Software Development :: Libraries :: Python Modules"]

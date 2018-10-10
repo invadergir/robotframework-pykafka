@@ -1,4 +1,4 @@
-# robotframework-pykafka
+# robotframework_pykafka
 
 This is a robot framework wrapper around pykafka, the best python kafka library out there as of this writing, and the only one that supports kafka 1.0 and 1.1.
 
@@ -10,6 +10,12 @@ This library provides some robotframework keywords that make working with Kafka 
 
 Support is guaranteed for Python 2.7.X only at this time.  It has not been tested on anything else.  All dependent libs should work under 3 but we have not tested yet.
 
+### Importing
+
+To import this library use the following command:
+
+ ```Library robotframework_pykafka.robotframework_pykafka```
+ 
 ### Kafka Version Support
 
 Support is guaranteed for 1.0.X only at this time.  It has not been tested on anything else.
