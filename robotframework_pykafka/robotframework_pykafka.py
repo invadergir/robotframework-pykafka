@@ -8,7 +8,8 @@ from robot.api.deco import keyword
 class robotframework_pykafka:
 
     def __init__(self):
-                # Determine the kafka host
+
+        # Determine the kafka host
         self._kafkaHost = ""
         try:
             self._kafkaHost = os.environ['KAFKA_HOST']
