@@ -1,5 +1,11 @@
 *** Settings ***
-Library     ../robotframework_pykafka/robotframework_pykafka.py
+# For lib testing: 
+#Library     ../robotframework_pykafka/robotframework_pykafka.py
+
+# Normal way to import when installed from pip:
+Library     robotframework_pykafka
+
+# Needed for JSON manipulation:
 Library     JSONLibrary
 
 *** Test Cases ***
