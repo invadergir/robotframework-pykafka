@@ -1,5 +1,6 @@
 *.pyc
 results/
+tests/testresults/
 
 ### VirtualEnv template
 # Virtualenv

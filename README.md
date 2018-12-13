@@ -97,7 +97,11 @@ For both the "Kafka Set Consumer Offset" keywords, the consumerGroupName is opti
 
 See the tests/ directory for some example tests of a kafka streams application.
 
+They are meant to run against a simple kafka streaming app on github.  
+
 ### Running the tests
+
+First get kafka and this app running:  [https://github.com/invadergir/kafka-streams-scala-template](https://github.com/invadergir/kafka-streams-scala-template)
 
 ```
 cd tests
