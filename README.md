@@ -14,27 +14,22 @@ Support is guaranteed for Python 2.7.X only at this time.  It has not been teste
 
 #### Dependencies
 
-The following dependencies are required for robotframework-pykafka.
+This following dependencies are downloaded when you install robotframework-pykafka:
 
-```
-pip install [-U] [--user] \
-    robotframework \
-    robotframework-jsonlibrary \
-    pykafka
-```
+* robotframework
+* pykafka
 
 Robotframework-jsonlibrary is not technically required for the library but the test examples use it, and it is recommended for JSON manipulation.
 
 #### Installing this library
 
 ```
-pip install [-U ] [--user] robotframework-pykafka
-    robotframework-pykafka
+pip install [-U ] [--user]  robotframework-pykafka
 ```
 
 ### Importing
 
-To import this library use the following command:
+To import this library into your robot test, use the following command:
 
 ```
 Library robotframework_pykafka
