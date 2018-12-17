@@ -12,16 +12,29 @@ Support is guaranteed for Python 2.7.X only at this time.  It has not been teste
 
 ### Installing
 
+#### Dependencies
+
+This following dependencies are downloaded when you install robotframework-pykafka:
+
+* robotframework
+* pykafka
+
+Robotframework-jsonlibrary is not technically required for the library but the test examples use it, and it is recommended for JSON manipulation.
+
+#### Installing this library
+
 ```
-pip install [-U --user] robotframework robotframework-pykafka
+pip install [-U ] [--user]  robotframework-pykafka
 ```
 
 ### Importing
 
-To import this library use the following command:
+To import this library into your robot test, use the following command:
 
- ```Library robotframework_pykafka.robotframework_pykafka```
- 
+```
+Library robotframework_pykafka
+```
+
 ### Kafka Version Support
 
 Support is guaranteed for 1.0.X only at this time.  It has not been tested on anything else.
@@ -78,6 +91,18 @@ For both the "Kafka Set Consumer Offset" keywords, the consumerGroupName is opti
 ## Examples
 
 See the tests/ directory for some example tests of a kafka streams application.
+
+They are meant to run against a simple kafka streaming app on github.  
+
+### Running the tests
+
+First get kafka and this app running:  [https://github.com/invadergir/kafka-streams-scala-template](https://github.com/invadergir/kafka-streams-scala-template)
+
+```
+cd tests
+OUTPUTDIR=testresults
+robot -d $OUTPUTDIR ./text-produce-consume.robot ./json-produce-consume.robot
+```
 
 ## TODO
 
