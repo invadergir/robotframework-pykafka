@@ -25,7 +25,7 @@ class robotframework_pykafka:
             self._kafkaBrokerVersion = os.environ['KAFKA_BROKER_VERSION']
         except KeyError as e:
             # Default it if not specified
-            self._kafkaBrokerVersion = "1.0.0"
+            self._kafkaBrokerVersion = "2.3.0"
         except Exception as e:
             raise e
 
@@ -94,7 +94,8 @@ class robotframework_pykafka:
 
         top = toStr(topicName)
         producer = self._getProducer(top)
-        return producer.produce(v, k) #, datetime.datetime.now()) ### TODO - for certain broker versions (less than 1.0?) you have to provide a time?
+        #convert input message values to byte
+        return producer.produce(bytes(v, 'utf-8'), bytes(k, 'utf-8')) #, datetime.datetime.now()) ### TODO - for certain broker versions (less than 1.0?) you have to provide a time?
 
     ##################################################
     ## TODO - needed?
@@ -157,9 +158,9 @@ class robotframework_pykafka:
         if cm == None:
             return None
         else:
-            # Modify the returned message, converting string value to a dict:
-            newValue = json.loads(cm[1])
-            tup = (cm[0], newValue)
+            # Modify the returned message, decode the byte msg and convert string value to a dict:
+            newValue = json.loads((cm[1].decode("utf-8")))
+            tup = (cm[0].decode("utf-8"), newValue)
             return tup
 
 
