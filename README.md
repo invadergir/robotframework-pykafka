@@ -1,6 +1,6 @@
 # robotframework-pykafka
 
-This is a robot framework wrapper around pykafka, the best python kafka library out there as of this writing, and the only one that supports kafka 1.0 and 1.1.
+This is a robot framework wrapper around pykafka, the best python kafka library out there as of this writing, and the only one that supports kafka 1.0, 1.1 and 2.3.
 
 ## Features
 
@@ -8,7 +8,7 @@ This library provides some robotframework keywords that make working with Kafka 
 
 ### Python Version Support
 
-Support is guaranteed for Python 2.7.X only at this time.  It has not been tested on anything else.  All dependent libs should work under 3 but we have not tested yet.
+Support is guaranteed for Python 3.X.
 
 ### Installing
 
@@ -37,7 +37,7 @@ Library robotframework_pykafka
 
 ### Kafka Version Support
 
-Support is guaranteed for 1.0.X only at this time.  It has not been tested on anything else.
+Support is guaranteed for  1.0.X and 2.3.X.
 
 ### Message Formats
 
@@ -56,7 +56,7 @@ Only string or JSON strings are supported.
 The following environment variables are assumed to have been set up in the session where this code is executed.  Defaults will be provided if not specified.
 
 * KAFKA_HOST:  "localhost:9092" is the default.
-* KAFKA_BROKER_VERSION:  "1.0.0" is the default.
+* KAFKA_BROKER_VERSION:  "2.3.0" is the default.
 
 ### Keywords 
 
@@ -109,7 +109,7 @@ robot -d $OUTPUTDIR ./text-produce-consume.robot ./json-produce-consume.robot
 1. Support for producing JSON (ie. use dict as argument that is converted internally to JSON string, "Kafka Produce JSON")
 1. Support for producing and consuming AVRO (pull requests wanted), ie. "Kafka Consume AVRO" and "Kafka Produce AVRO"
 1. Test under later kafka versions
-1. Test under Python 3.
+
 
 ## License
 
