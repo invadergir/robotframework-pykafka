@@ -1,2 +1,2 @@
-robotframework >= 3.0.4
-pykafka >= 2.7.0
+robotframework >= 3.2.1
+pykafka >= 2.8.0

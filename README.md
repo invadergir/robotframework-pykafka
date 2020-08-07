@@ -8,7 +8,9 @@ This library provides some robotframework keywords that make working with Kafka 
 
 ### Python Version Support
 
-Support is guaranteed for Python 3.X.
+Only python 3.X is supported.
+
+The older version 0.10 supports python 2.7.
 
 ### Installing
 
@@ -24,7 +26,10 @@ Robotframework-jsonlibrary is not technically required for the library but the t
 #### Installing this library
 
 ```
-pip install [-U ] [--user]  robotframework-pykafka
+pip3 install [-U ] [--user]  robotframework-pykafka
+
+# For testing you may wish to install these too:
+pip3 install -U --user --upgrade robotframework-jsonlibrary robotframework-httplibrary
 ```
 
 ### Importing
@@ -37,7 +42,7 @@ Library robotframework_pykafka
 
 ### Kafka Version Support
 
-Support is guaranteed for  1.0.X and 2.3.X.
+1.0.X through 2.3.X.
 
 ### Message Formats
 
