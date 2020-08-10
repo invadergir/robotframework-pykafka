@@ -4,6 +4,7 @@ setup(
     name='robotframework_pykafka',
     packages=['robotframework_pykafka'],  # this must be the same as the name above
     version='0.11',
+    python_requires='>=3.5',
     install_requires=[
         'robotframework >= 3.2.1',
         'pykafka >= 2.8.0'
