@@ -1,6 +1,6 @@
 #!/bin/python3
 
-from kafka_helper import *
+import robotframework_pykafka.kafka_helper
 from robot.api import logger
 from robot.api.deco import keyword
 
