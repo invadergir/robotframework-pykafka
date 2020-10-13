@@ -5,7 +5,7 @@ import os
 import time
 from pykafka import KafkaClient
 from pykafka.common import OffsetType
-from utils import *
+from robotframework_pykafka.utils import *
 
 ##################################################
 # Kafka helper class.
