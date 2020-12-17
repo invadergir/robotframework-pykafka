@@ -93,7 +93,7 @@ class kafka_helper:
                 auto_offset_reset = offsetType,
                 auto_commit_enable = True,
                 reset_offset_on_start = True,
-                consumer_timeout_ms = 1000)
+                consumer_timeout_ms = 3000)
 
             self._consumers[(top, cgn)] = c
             return c
