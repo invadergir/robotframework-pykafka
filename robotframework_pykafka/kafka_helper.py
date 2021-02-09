@@ -46,7 +46,17 @@ class kafka_helper:
                 raise e
 
         # Get a kafka client
-        self._client = KafkaClient(hosts = self._kafkaHost, broker_version = self._kafkaBrokerVersion)
+        try:
+            self._cafile = os.environ['CAFILE']
+        finally:
+            pass
+
+        if self._cafile:
+            config = SslConfig(cafile=self._cafile)
+            self._client = KafkaClient(hosts=self._kafkaHost, broker_version=self._kafkaBrokerVersion,
+                                       ssl_config=config)
+        else:
+            self._client = KafkaClient(hosts=self._kafkaHost, broker_version=self._kafkaBrokerVersion)
 
         self._producers = dict()
 
