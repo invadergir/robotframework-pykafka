@@ -17,7 +17,7 @@ class kafka_helper:
     # 1. constructor parameters if they are non-None and non-empty
     # 2. environment variables KAFKA_HOST and KAFKA_BROKER_VERSION
     # 3. default values (localhost and 2.3)
-    def __init__(self, kafkaBrokerHostname = None, kafkaBrokerVersion = None):
+        def __init__(self, kafkaBrokerHostname=None, kafkaBrokerVersion=None, cafile=None):
 
         # Determine the kafka host
         self._kafkaHost = ""
@@ -45,12 +45,16 @@ class kafka_helper:
             except Exception as e:
                 raise e
 
+        self._cafile = ""
+        if cafile:
+            self._cafile = cafile
+        else:
+            try:
+                self._cafile = os.environ['CAFILE']
+            except KeyError:
+                pass
+           
         # Get a kafka client
-        try:
-            self._cafile = os.environ['CAFILE']
-        finally:
-            pass
-
         if self._cafile:
             config = SslConfig(cafile=self._cafile)
             self._client = KafkaClient(hosts=self._kafkaHost, broker_version=self._kafkaBrokerVersion,
