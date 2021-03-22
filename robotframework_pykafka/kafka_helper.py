@@ -17,7 +17,7 @@ class kafka_helper:
     # 1. constructor parameters if they are non-None and non-empty
     # 2. environment variables KAFKA_HOST and KAFKA_BROKER_VERSION
     # 3. default values (localhost and 2.3)
-        def __init__(self, kafkaBrokerHostname=None, kafkaBrokerVersion=None, cafile=None):
+    def __init__(self, kafkaBrokerHostname=None, kafkaBrokerVersion=None, cafile=None):
 
         # Determine the kafka host
         self._kafkaHost = ""
